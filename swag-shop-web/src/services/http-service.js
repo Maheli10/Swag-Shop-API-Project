@@ -1,14 +1,28 @@
+// src/services/http-service.js
+
 import 'whatwg-fetch';
 
 class httpService {
-    getProducts = () => {
-        var promise = new Promise((resolve, reject) => {
-            fetch('http://localhost:3000/api/products')
-            .then(response => response.json())
-            .then(products => resolve(products))
-            .catch(error => reject(error));
-        });
-        return promise;
+
+    getProducts = async () => {
+        try {
+            const response = await fetch('http://localhost:3000/api/products');
+
+            // Check if response is OK
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            // Convert to JSON
+            const data = await response.json();
+            return data;
+
+        } catch (error) {
+            console.error('Error fetching products:', error);
+            throw error; // so App.js can catch it too
+        }
     }
+
 }
+
 export default httpService;
