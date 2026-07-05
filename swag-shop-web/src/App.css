@@ -110,20 +110,16 @@
   align-items: center;
 }
 
-.navbar__cart-count {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #c7a96b;
-  color: #111111;
-  font-size: 0.65rem;
-  font-weight: 700;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.navbar__wishlist {
+  position: relative;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar__wishlist svg {
+  color: #ff6f61; /* coral accent */
 }
 
 .navbar__toggle {
