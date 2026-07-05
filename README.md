@@ -190,4 +190,4 @@ Keep `CLIENT_ORIGIN` in the API env matching the React port (`http://localhost:3
 | POST | `/api/wishlists` | Create wishlist (`title`) |
 
 
-# If the deployed Vercel link https://swag-shop-api-project.vercel.app/ does not work, a demonstration version is available in the `assets` folder.
+## If the deployed Vercel link https://swag-shop-api-project.vercel.app/ does not work, a demonstration version is available in the `assets` folder.
